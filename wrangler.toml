@@ -1,0 +1,11 @@
+[env.production]
+name = "gamevault"
+compatibility_date = "2023-06-15"
+compatibility_flags = [ "nodejs_compat" ]
+workers_dev = false
+routes = [
+  { pattern = "windflash.us", custom_domain = true }
+]
+
+[site]
+bucket = ".next" 
