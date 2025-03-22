@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景渐变 -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#202f55" />
+      <stop offset="100%" stop-color="#0a1228" />
+    </linearGradient>
+    <!-- 赛车金属质感 -->
+    <linearGradient id="carGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e43b3b" />
+      <stop offset="50%" stop-color="#ff5757" />
+      <stop offset="100%" stop-color="#b01c1c" />
+    </linearGradient>
+    <!-- 点击效果 -->
+    <radialGradient id="clickGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#ffcc00" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#ffcc00" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="600" height="400" rx="20" fill="url(#bgGradient)" />
+  
+  <!-- 环形赛道 -->
+  <ellipse cx="300" cy="200" rx="220" ry="120" stroke="#444" stroke-width="30" fill="none" />
+  <ellipse cx="300" cy="200" rx="220" ry="120" stroke="#666" stroke-width="28" fill="none" />
+  <ellipse cx="300" cy="200" rx="220" ry="120" stroke="#555" stroke-width="26" fill="none" />
+  <!-- 赛道标记 -->
+  <path d="M100,230 L120,230" stroke="white" stroke-width="5" />
+  <path d="M480,230 L500,230" stroke="white" stroke-width="5" />
+  <path d="M300,80 L300,100" stroke="white" stroke-width="5" />
+  <path d="M300,300 L300,320" stroke="white" stroke-width="5" />
+  
+  <!-- 赛车 -->
+  <g transform="translate(400, 180) rotate(30)">
+    <!-- 车身 -->
+    <rect x="0" y="0" width="70" height="25" rx="5" fill="url(#carGradient)" />
+    <!-- 车窗 -->
+    <rect x="40" y="5" width="20" height="15" rx="2" fill="#336" />
+    <!-- 车轮 -->
+    <circle cx="15" cy="25" r="10" fill="#222" />
+    <circle cx="15" cy="25" r="4" fill="#444" />
+    <circle cx="55" cy="25" r="10" fill="#222" />
+    <circle cx="55" cy="25" r="4" fill="#444" />
+    <!-- 排气 -->
+    <rect x="-10" y="10" width="10" height="5" rx="2" fill="#444" />
+  </g>
+  
+  <!-- 点击效果 -->
+  <g transform="translate(200, 200)">
+    <circle cx="0" cy="0" r="40" fill="url(#clickGradient)" />
+    <text x="0" y="5" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">CLICK!</text>
+    <circle cx="0" cy="0" r="30" stroke="white" stroke-width="2" fill="none" stroke-dasharray="5,5">
+      <animate attributeName="r" from="30" to="45" dur="1s" repeatCount="indefinite" />
+      <animate attributeName="opacity" from="1" to="0" dur="1s" repeatCount="indefinite" />
+    </circle>
+  </g>
+  
+  <!-- 速度指示器 -->
+  <g transform="translate(490, 150)">
+    <path d="M0,0 L15,15 L0,30 Z" fill="#ffcc00" />
+    <rect x="15" y="5" width="15" height="20" fill="#ffcc00" />
+    <rect x="30" y="5" width="15" height="20" fill="#ffcc00" />
+    <rect x="45" y="5" width="15" height="20" fill="#ffcc00" opacity="0.6" />
+    <rect x="60" y="5" width="15" height="20" fill="#ffcc00" opacity="0.3" />
+  </g>
+  
+  <!-- 标题 -->
+  <text x="300" y="330" font-family="Arial, sans-serif" font-size="36" font-weight="bold" text-anchor="middle" fill="white">RACE CLICKER</text>
+  
+  <!-- 硬币/奖励元素 -->
+  <circle cx="150" cy="100" r="15" fill="#ffcc00" />
+  <text x="150" y="105" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#333">$</text>
+  
+  <circle cx="450" cy="100" r="15" fill="#ffcc00" />
+  <text x="450" y="105" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#333">$</text>
+</svg> 
